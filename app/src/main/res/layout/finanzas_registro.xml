@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+<TextView
+    android:id="@+id/lblRegistroTitulo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Registrar Nuevo Movimiento"
+    android:textSize="22sp"
+    android:textStyle="bold"
+    android:layout_marginBottom="24dp"
+    android:textColor="#B71C1C"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Monto del Gasto/Ingreso:"
+    android:textStyle="bold"/>
+
+<EditText
+    android:id="@+id/txtMontoInput"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Ej. 150.00"
+    android:inputType="numberDecimal"
+    android:layout_marginBottom="16dp"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Concepto / Descripción:"
+    android:textStyle="bold"/>
+
+<EditText
+    android:id="@+id/txtConceptoInput"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Ej. Compra de despensa, Pago de luz"
+    android:inputType="text"
+    android:layout_marginBottom="20dp"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Selecciona el Tipo de Movimiento:"
+    android:textStyle="bold"
+    android:layout_marginBottom="8dp"/>
+
+<RadioGroup
+    android:id="@+id/rdgTipoMovimiento"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="30dp">
+
+    <RadioButton
+        android:id="@+id/rdbGastoFijo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gasto Fijo (Renta, Servicios, Créditos)"
+        android:checked="true"/>
+
+    <RadioButton
+        android:id="@+id/rdbGastoVariable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gasto Variable (Comida, Entretenimiento, Viajes)"/>
+
+    <RadioButton
+        android:id="@+id/rdbIngreso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingreso / Depósito Bancario"/>
+</RadioGroup>
+
+<Button
+    android:id="@+id/btnGuardarMovimiento"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Guardar en el Historial"
+    android:backgroundTint="#B71C1C"
+    android:textColor="#FFFFFF"/>
+
+</LinearLayout>
